@@ -10,6 +10,12 @@ build in server.
 * Webpack
 * Socket.IO
 
+## Directory structure ##
+* /src/client - Contains all code related to the client
+* /src/client/main.ts - This is where the application starts
+* /src/server - Contains all code related to the server
+* /src/server/server.ts - This is where the server starts
+
 ## Getting Started ##
 1. Run `npm install`
 1. Run `npm start`

@@ -2,8 +2,6 @@ import * as express from "express";
 import * as http from 'http'
 import * as debug from "debug";
 import webpackDevelopmentConfig from "../config/webpack.dev";
-import * as io from 'socket.io'
-import Socket = SocketIO.Socket;
 import {DIST} from "../config/paths";
 
 const log = debug('app:server');
@@ -12,7 +10,6 @@ class Server {
 
   public express: express.Application;
   private server: http.Server;
-  private socket: SocketIO.Server;
 
   constructor() {
     this.express = express();
@@ -22,13 +19,11 @@ class Server {
 
   public listen(port: number) {
     this.server = http.createServer(this.express);
-    this.socket = io(this.server);
 
     this.server.listen(port, () => {
       log(`listening at http://localhost:${port}`) // eslint-disable-line
     });
 
-    this.socket.on('connect', () => { log('connected'); });
   }
 
   // Configure Express middleware.
@@ -52,7 +47,6 @@ class Server {
       // this.express.use(require('webpack-hot-middleware')(compiler));
 
       this.express.use('/assets', express.static('src/client/assets'));
-      this.express.use('/shaders', express.static('src/client/shaders'));
     } else {
       this.express.use('/', express.static(DIST));
     }

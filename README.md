@@ -8,7 +8,6 @@ build in server.
 * BabylonJS
 * TypeScript
 * Webpack
-* Socket.IO
 
 ## Directory structure ##
 * /src/client - Contains all code related to the client

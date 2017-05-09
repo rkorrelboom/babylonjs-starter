@@ -8,30 +8,37 @@ server side stuff you can easily implement it in the server class.
 * TypeScript
 * Webpack
 
-## Directory structure ##
+## Project structure ##
+```
+├── README.md
+├── bin
+│   └── server.ts - Used to start the node server
+├── nodemon.json - Nodemon config
+├── package.json - Dependencies
+├── src
+│   ├── client
+│   │   ├── assets - Place your assets here
+│   │   ├── index.html - Index html template
+│   │   ├── main.ts - Client code starts here
+│   │   ├── style.css - Global styling
+│   │   └── vendor.ts - Import vendor packages here
+│   ├── config
+│   │   ├── environment.ts - Environment configuration
+│   │   ├── paths.ts - Paths do client, server, dist, etc
+│   │   ├── webpack.common.ts - Webpack common config
+│   │   ├── webpack.dev.ts - Webpack development config
+│   │   └── webpack.prod.ts - Webpack production config
+│   └── server
+│       └── server.ts - Express Node.js server
+└── tsconfig.json
 
-* bin
-    * server.ts
-* src
-    * client
-        * assets - Put your assets here
-        * index.html
-        * main.ts - The client starts here
-        * style.css
-        * vendor.ts - Import vendor packages here
-    * config
-        * environment.ts
-        * paths.ts
-        * webpack.common.ts
-        * webpack.dev.ts
-        * webpack.prod.ts
-    * server
-      * server.ts
+```
 
 ## Getting Started ##
 1. Run `npm install`
 1. Run `npm start`
 1. Check http://localhost:3000 in your browser
+1. Start developing in `src/client/main.ts`
 
 ## Available commands ##
 * `npm start` - Start a local development server with a watcher for 

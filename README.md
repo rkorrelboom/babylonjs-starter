@@ -24,7 +24,7 @@ server side stuff you can easily implement it in the server class.
 │   │   └── vendor.ts - Import vendor packages here
 │   ├── config
 │   │   ├── environment.ts - Environment configuration
-│   │   ├── paths.ts - Paths do client, server, dist, etc
+│   │   ├── paths.ts - Paths to client, server, dist, etc
 │   │   ├── webpack.common.ts - Webpack common config
 │   │   ├── webpack.dev.ts - Webpack development config
 │   │   └── webpack.prod.ts - Webpack production config

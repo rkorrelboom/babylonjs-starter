@@ -21,5 +21,7 @@ build in server.
 1. Check http://localhost:3000 in your browser
 
 ## Building for deployment ##
-1. Run `npm build`
-1. Copy the dist folder to your server
+1. Run `npm run build`
+1. Run `npm run start:prod` to run the build locally
+1. Copy the dist folder to your server and serve using your favourite
+webserver

@@ -3,7 +3,7 @@
   "version": "1.0.0",
   "description": "BabylonJS starter",
   "scripts": {
-    "clean": "rm -rf compiled",
+    "clean": "rm -rf dist",
     "start": "nodemon --exec ./node_modules/.bin/ts-node -- ./bin/server.ts",
     "start:prod": "NODE_ENV=production ts-node ./bin/server.ts",
     "build": "npm run clean && webpack --config src/config/webpack.prod.ts --progress --profile --bail"

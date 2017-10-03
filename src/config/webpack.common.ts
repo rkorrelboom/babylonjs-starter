@@ -31,7 +31,7 @@ export default {
 
   plugins: [
     new webpack.optimize.CommonsChunkPlugin({
-      name: ['app', 'vendor']
+      names: ['app', 'vendor']
     }),
     new webpack.DefinePlugin({
       'process.env': {
